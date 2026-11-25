@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Comparison — E-Com Assistant</title>
+  <link rel="icon" href="icons/icon32.png" />
+  <link rel="stylesheet" href="compare.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>📊 Product Comparison</h1>
+      <p class="muted" id="summary">—</p>
+    </div>
+    <div class="actions">
+      <label class="toggle"><input type="checkbox" id="diffOnly" /> Show differences only</label>
+      <button id="rescanBtn" class="btn secondary">⟳ Scan open tabs</button>
+      <button id="xlsxBtn" class="btn primary">⬇ Excel (.xlsx)</button>
+      <button id="csvBtn" class="btn secondary">⬇ CSV</button>
+      <button id="clearBtn" class="btn danger">Clear</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="locked" class="locked hidden">
+      <div class="lock-icon">🔒</div>
+      <h2>Multi-Tab Comparison is a Pro feature</h2>
+      <p>Weekly Pass from $0.99 · Yearly $20 · Lifetime $39.99</p>
+      <a class="btn gold" href="popup.html?view=tab#pro">See Pro plans</a>
+    </div>
+
+    <div id="tableWrap" class="table-wrap"></div>
+    <p class="legend muted">
+      <span class="best-chip">Best</span> = lowest price (same currency), highest rating / reviews / sold.
+    </p>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="shared.js"></script>
+  <script src="jszip.min.js"></script>
+  <script src="compare.js"></script>
+</body>
+</html>
